@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react"
-import { Navbar, Container } from "react-bootstrap"
-import { NavLinksqrqrq } from "react-bootstrap"
+import { Navbar, Container, Nav } from "react-bootstrap"
 import logo from "../assets/img/logo.svg"
 import navIcon1 from "../assets/img/nav-icon1.svg"
 import navIcon2 from "../assets/img/logo.svg"
 import navIcon3 from "../assets/img/logo.svg"
 
 
-export const Navbar = () => {
+export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, seScrolled] = useState[false];
+    const [scrolled, seScrolled] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -42,8 +41,8 @@ export const Navbar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active-navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                        <Nav.Link href="#link" className={activeLink === 'skills' ? 'active-navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Link</Nav.Link>
-                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active-navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Projects</Nav.Link>
+                        <Nav.Link href="#link" className={activeLink === 'skills' ? 'active-navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Link</Nav.Link>
+                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active-navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
