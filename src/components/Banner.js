@@ -27,7 +27,7 @@ export const Banner = () => {
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
         setText(updatedText);
 
-        if (isDeleting) {  
+        if (isDeleting) {
             setDelta(prevDelta => prevDelta / 2)
         }
         if (!isDeleting && updatedText === fullText) {
@@ -44,7 +44,7 @@ export const Banner = () => {
 
 
     return (
-        <section id="home" className="Banner" >
+        <section  className="banner" id="home">
             <Container>
                 <Row className="align-item-center">
                     <Col xs={12} md={6} xl={7} >
