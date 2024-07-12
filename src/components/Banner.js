@@ -44,7 +44,6 @@ export const Banner = () => {
 
 
     return (
-
         <section id="home" className="Banner" >
             <Container>
                 <Row className="align-item-center">
